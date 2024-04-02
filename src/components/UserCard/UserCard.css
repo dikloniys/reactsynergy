@@ -1,0 +1,14 @@
+.user-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .user-card input,
+  .user-card button {
+    margin-bottom: 5px;
+  }
+  span{
+    margin-right: 5px;
+  }
