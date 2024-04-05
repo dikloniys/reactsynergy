@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { selectUser } from "../../../../userActions";
+import { selectUser } from "../../../userActions";
 
 const UserItem = ({ user }) => {
   const dispatch = useDispatch();

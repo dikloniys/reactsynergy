@@ -1,7 +1,7 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from './store';
-import UserList from "./components/UserCard/UserList/UserList";
+import store from './store/store';
+import UserList from "./components/UserList/UserList";
 
 const App = () => {
   return (
