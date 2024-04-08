@@ -6,7 +6,6 @@ import "./UserList.css";
 
 const UserList = () => {
   const userState = useSelector(state => state.userReducer.users); 
-  console.log(userState);
   const selectedUserState = useSelector(state => state.userReducer.selectedUser)
   const dispatch = useDispatch();
   if (!userState || userState.length === 0) return <div>No users found</div>;

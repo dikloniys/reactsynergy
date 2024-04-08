@@ -4,9 +4,9 @@ import { selectUser, ChangeUser, saveUser } from '../../store/hoocks/useSlice';
 import "./UserCard.css"
 
 const UserCard = () => {
+  const userState = useSelector(state => state.userReducer.users); 
   const selectedUserState = useSelector(state => state.userReducer.selectedUser)
   const dispatch = useDispatch();
-  console.log(selectedUserState);
     const handleChange = (e) => {
       const { name, value } = e.target;
       const updatedUser = {
@@ -18,16 +18,14 @@ const UserCard = () => {
   
     const handleSave = () => {
       console.log("Updated user:", selectedUserState);
-      dispatch(saveUser(selectedUserState));
+      userState.find((item) => item.id === selectedUserState.id);
+      
+      dispatch(saveUser(userState));
       dispatch(selectUser(null))
     };
-  console.log(selectedUserState);
 
   if (selectedUserState == null) return <div></div>;
-  
 
-  
-  
     return (
       <div className="user-card">
         <h2>User Details</h2>

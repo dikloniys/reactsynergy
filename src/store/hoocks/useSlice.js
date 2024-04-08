@@ -1,9 +1,17 @@
 import { createSlice } from '@reduxjs/toolkit';
+// import { jest } from '@jest/globals'
 import { users } from "../../constant"
+
+// jest.mock("../../constant")
+
+// const users = async () => {
+//     await api
+//     }
 
 export const userSlice = createSlice({
   name: 'userReducer',
   initialState: {
+    
     users,
     selectedUser: null
   },
@@ -15,7 +23,8 @@ export const userSlice = createSlice({
       state.selectedUser = action.payload;
     },
     saveUser: (state, action) => {
-      console.log(state.users);
+      state.users = action.payload;
+     
     }
   }
 });
